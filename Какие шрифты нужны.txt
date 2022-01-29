@@ -1,0 +1,21 @@
+ body   font-family: "Uni Neue", sans-serif
+line-height: 1.2
+line-height: 1.5
+font-weight: 400 UniNeueBook
+font-weight: 500 UniNeueRegular
+font-weight: 900 (Heavy)
+
+
+
+font-size: 1.15rem 
+font-size: 1vw 
+font-size: 0.94rem
+font-size: 0.83rem
+
+body
+font-family: "Uni Neue", sans-serif;
+    line-height: 1.2;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: #282828;
+    background-color: #fff !important;

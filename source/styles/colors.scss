@@ -1,0 +1,29 @@
+/* no sense variables */
+$inherit: inherit;
+$transparent: transparent;
+$white: #ffffff;
+$black: #000000;
+
+$gray: #dcdcdc;
+$gray-darker: #767676;
+$gray-darkest: #777777;
+
+/* variables with sense */
+/* *********************************************************************** */
+$header--BGColor: $gray;
+$header--Color: $gray-darkest;
+$header__phone-number--BorderColor: $gray-darkest;
+$header__sandwich-ico--BGColor: $gray-darkest;
+$header__sandwich-ico-after-before--BGColor: $gray-darkest;
+$header__navigation--BGColor: $gray-darkest;
+$header__navigation-item--color: $white;
+$header__navigation-item--BorderColor: $white;
+
+$side-bar--BGColor: $gray-darkest;
+$side-bar--Color: $white;
+
+$content-screen__conten--Color: $gray-darker;
+
+$footer--BGColor: $gray-darkest;
+$footer--Color: $white;
+$footer__navigation-item-link--BorderColor: $white;
