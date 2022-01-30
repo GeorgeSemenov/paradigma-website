@@ -1,0 +1,6 @@
+mixin header__lang-container(modifier)
+  if modifier["langText"] == undefined
+    - modifier["langText"] = "empty__langText";
+  .header__lang-container&attributes(attributes)
+    p!=modifier.langText
+    +header__langs(modifier)

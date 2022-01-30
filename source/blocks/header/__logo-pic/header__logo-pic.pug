@@ -1,0 +1,5 @@
+mixin header__logo-pic(modifier)
+  if modifier["logoHref"] == undefined
+    - modifier["logoHref"] = "#!";
+  a(href=modifier.logoHfref)
+    img(src=require('../../img/logo.png') alt="logo").header__logo-pic&attributes(attributes)

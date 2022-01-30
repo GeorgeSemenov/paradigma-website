@@ -1,0 +1,8 @@
+mixin header__logo-text(modifier)
+  if modifier["logoText"] == undefined
+    - modifier["logoText"] = "empty__logoText";
+  if modifier["logoTextBold"] == undefined
+    - modifier["logoTextBold"] = "empty__logoTextBold";
+  p.header__logo-text&attributes(attributes)
+    b!=modifier.logoTextBold
+    !=modifier.logoText

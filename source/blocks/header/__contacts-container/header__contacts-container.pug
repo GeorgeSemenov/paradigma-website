@@ -1,0 +1,9 @@
+mixin header__contacts-container(modifier)
+  if modifier["contacts"] == undefined
+    - modifier["contacts"] = [{}];
+  ul.header__contacts-container&attributes(attributes)
+    each contact in modifier.contacts
+      if contact["modifier"] == undefined
+        - contact["modifier"] = "";
+      li
+        +contact(contact)(class=("header__contact " + contact.modifier))

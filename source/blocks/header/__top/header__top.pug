@@ -1,2 +1,8 @@
 mixin header__top(modifier)
   .header__top&attributes(attributes)
+    +header__logo(modifier)
+    +header__map(modifier)
+    +header__lang-container(modifier)
+    +header__sandwich-button(modifier)
+    +button(modifier.buttonText)(class="header__button")
+    +header__contacts-container(modifier)

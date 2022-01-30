@@ -1,0 +1,9 @@
+mixin header__navigation(modifier)
+  if modifier["navs"] == undefined
+    - modifier["navs"] = [{}];
+  nav.header__navigation&attributes(attributes)
+    ul
+      each nav in modifier.navs
+        if nav["modifier"] == undefined
+          - nav["modifier"] = "";
+        +header__navigation-item(nav)

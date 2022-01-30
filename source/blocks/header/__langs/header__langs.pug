@@ -1,0 +1,8 @@
+mixin header__langs(modifier)
+  if modifier["langs"] == undefined
+    - modifier["langs"] = [{}];
+  ul.header__langs&attributes(attributes)
+    each lang in modifier.langs
+      if lang["modifier"] == undefined
+        - lang["modifier"] = "";
+      +header__lang(lang)(class=lang.modifier)

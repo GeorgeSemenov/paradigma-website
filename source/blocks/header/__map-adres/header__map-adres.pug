@@ -1,0 +1,11 @@
+mixin header__map-adres(modifier)
+  if modifier["mapAdresBold"] == undefined
+    - modifier["mapAdresBold"] = "empty__mapAdressBold";
+  if modifier["mapAdres"] == undefined
+    - modifier["mapAdres"] = "empty__mapAdres";
+  if modifier["mapAdresHighlighted"] == undefined
+    - modifier["mapAdresHighlighted"] = "empty__mapAdresHighlighted";
+  p.header__map-adres&attributes(attributes)
+    b!=modifier.mapAdresBold
+    !=modifier.mapAdres
+    span!=modifier.mapAdresHighlighted
