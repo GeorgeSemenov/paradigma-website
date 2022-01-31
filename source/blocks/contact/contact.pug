@@ -1,8 +1,22 @@
+include ../../img/SVG/telegram.pug
+include ../../img/SVG/whatsApp.pug
+include ../../img/SVG/viber.pug
+include ../../img/SVG/phn.pug
 mixin contact(modifier)
   if modifier == undefined
     - modifier = {}
   if modifier["href"] == undefined
     - modifier["href"] = "#!";
   if modifier["text"] == undefined
-    - modifier["text"] = "empty__linktext";
-  a.contact(href=modifier.href)&attributes(attributes)!=modifier.text
+    - modifier["text"] = "";
+  a.contact(href=modifier.href)&attributes(attributes)
+    case modifier.messanger
+      when "telegram"
+        +telegram()
+      when "whatsApp"
+        +whatsApp()
+      when "viber"
+        +viber()
+      when "phn"
+        +phn()
+    !=modifier.text
