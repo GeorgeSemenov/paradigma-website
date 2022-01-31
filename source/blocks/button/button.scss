@@ -1,1 +1,31 @@
-.button {}
+@keyframes blik{
+  from{left: -50%;}
+  to {left: 150%;}
+}
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  color: $button--Color;
+  position: relative;
+  overflow: hidden;
+  padding: 1.4vw 1.6vw;
+  background-color: $button--BGColor;
+  @media (max-width: $md - 1px){
+    padding: 20px 15px;
+  }
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height:200%;
+    width: 20px;
+    background-color: white;
+    top: -50%;
+    transform: rotate(45deg);
+    left: -50%;
+    animation-name: blik;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
